@@ -26,5 +26,22 @@
 //     console.log('Yup.');
 //   };
 // }
+// $(".langswitcher a").on("click",function(e){
+//     e.preventDefault();
+//     $(".langswitcher li").removeClass("active");
+//     $("html").attr("lang",$(this).data("lang"));
+//     $(this).parent().addClass("active");
+//   });
 
+function deleteHr() {
+    let elems = document.querySelectorAll('hr');
 
+    for(let i = 0; i < elems.length; i++) {
+  let elem = elems[i];
+  
+  if(elem.nextElementSibling.tagName === 'HR') {
+     elem.add();
+     i++;
+  }
+}
+}
